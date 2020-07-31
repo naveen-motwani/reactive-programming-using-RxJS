@@ -1,0 +1,43 @@
+<div fxLayout="row wrap" class="matero-row" *ngIf="productViewModel$|async as productViewModel">
+  <div fxFlex="100" fxFlex.lt-sm="100" class="matero-col">
+    <mat-card>
+      <mat-card-title>View Product</mat-card-title>
+      <form class="matero-form-horizontal">
+        <div fxLayout="row wrap" fxLayoutGap="8px grid">
+          <div fxFlex="100" fxFlex.lt-sm="100">`
+            <mat-form-field>
+              <mat-label>Name</mat-label>
+              <input matInput value="{{productViewModel.name}}">
+            </mat-form-field>
+          </div>
+
+          <div fxFlex="100" fxFlex.lt-sm="100">
+            <mat-form-field>
+              <mat-label>Price</mat-label>
+              <input matInput placeholder="" value="{{productViewModel.price}}">
+            </mat-form-field>
+          </div>
+
+          <div fxFlex="100" fxFlex.lt-sm="100">
+            <mat-form-field>
+              <mat-label>Description</mat-label>
+              <input matInput value="{{productViewModel.description}}">
+            </mat-form-field>
+          </div>
+
+          <div fxFlex="100" fxFlex.lt-sm="100">
+            <mat-form-field>
+              <mat-label>Category</mat-label>
+              <input matInput placeholder="" value="{{productViewModel.categoryName}}">
+            </mat-form-field>
+          </div>
+        </div>
+        <div fxLayout="row wrap" fxLayoutGap="8px grid">
+          <div fxFlex="5" fxFlex.lt-sm="100">
+            <button mat-raised-button color="secodary" class="m-t-8" (click)="cancel();">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </mat-card>
+  </div>
+</div>
